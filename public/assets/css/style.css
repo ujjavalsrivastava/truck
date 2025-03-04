@@ -18895,7 +18895,7 @@ footer.style-3 .footer-btm .social-area ul li a:hover {
    48. Inner Pages Banner
 ========================================*/
 .inner-page-banner {
-  background-image: url(../img/inner-page/inner-bg.png), linear-gradient(#FAFAFA, #FAFAFA);
+  background-image: url(../img/inner-page/inner-bg.png), linear-gradient(#7e7e7e, #8b8b8b, #ababab, #000000);
   background-size: cover;
   background-repeat: no-repeat;
 }

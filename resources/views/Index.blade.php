@@ -112,8 +112,8 @@
                                     <img src="{{$row['image']}}" style="height:45px" alt="">
                                 </div>
                                 <div class="content">
-                                    <h6>Available Cars</h6>
-                                    <span>(5463)</span>
+                                    <h6>{{$row['name']}}</h6>
+                                    
                                 </div>
                             </a>
                         </div>
@@ -330,7 +330,11 @@
                                         <div class="swiper-wrapper">
                                             @foreach($row['images'] as $img)
                                             <div class="swiper-slide">
-                                                <img class="img-fluid" src="{{$img}}" style="width:311px;height:346px" alt="image">
+                                                @php   
+                                                $transformation = "c_fill,h_346,w_311"; 
+                                               $img = modifyCloudinaryUrl($img,$transformation)
+                                                @endphp
+                                                <img class="img-fluid" src="{{$img}}" style="width:100%;"  alt="image">
                                             </div>
                                             @endforeach
                                            
@@ -444,6 +448,7 @@
                     <div class="swiper recent-launch-car-slider">
                         <div class="swiper-wrapper">
                             @foreach($trucklist as $row)
+                                         
                             <div class="swiper-slide">
                                 <div class="product-card2">
                                     <div class="product-img">
@@ -453,7 +458,11 @@
                                                 </path>
                                             </svg>
                                         </a>
-                                        <img src="{{$row['images'][0]}}" style="width:283px;height:317px;" alt="">
+                                        @php   
+                                                $transformation = "c_fill,h_317,w_283"; 
+                                               $img = modifyCloudinaryUrl($row['images'][0],$transformation)
+                                                @endphp
+                                        <img src="{{$img}}"  alt="">
                                     </div>
                                     <div class="product-content">
                                         <div class="details-btn">
@@ -462,7 +471,7 @@
                                         <div class="price">
                                             <strong>{{round($row['price'],2)}}</strong>
                                         </div>
-                                        <h6><a href="car-deatils.html">{{ucwords($row['name'])}}-{{$row['year']}}</a></h6>
+                                        <h6><a href="{{url('truck-details')}}/{{$row['_id']}}">{{ucwords($row['name'])}}-{{$row['year']}}</a></h6>
                                     </div>
                                 </div>
                             </div>
@@ -531,11 +540,15 @@
                                 <div class="col-xl-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="200ms">
                                     <div class="product-card2 two">
                                         <div class="product-img">
-                                            <img src="{{$row['images'][0]}}" style="width:285px;height:173px" alt="img">
+                                        @php   
+                                                $transformation = "c_fill,h_173,w_285"; 
+                                               $img = modifyCloudinaryUrl($row['images'][0],$transformation)
+                                                @endphp
+                                            <img src="{{$img }}"  alt="img">
                                         </div>
                                         <div class="product-content">
                                             <div class="company-logo">
-                                                <a href="{{url('category-wise-list')}}/{{$row['_id']}}"><img src="{{$row['category']['image']}}" style="width:44px;height:44px" alt=""></a>
+                                                <a href="{{url('category-wise-list')}}/{{$row['_id']}}"><img src="{{$row['category']['logo']}}" style="width:44px;height:44px" alt=""></a>
                                             </div>
                                             <div class="price">
                                                 <strong>{{$row['price']}}</strong>

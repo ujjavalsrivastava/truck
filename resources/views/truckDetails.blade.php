@@ -191,8 +191,12 @@
                                             <div class="swiper product-img-slider">
                                                 <div class="swiper-wrapper">
                                                     @foreach($detail['images'] as $row)
+                                                    @php   
+                                                $transformation = "c_fill,h_404,w_736"; 
+                                               $img = modifyCloudinaryUrl($row,$transformation)
+                                                @endphp
                                                     <div class="swiper-slide">
-                                                        <img src="{{$row}}"  style="width:100%;height:404px" alt="image">
+                                                        <img src="{{$img}}"  style="width:100%;" alt="image">
                                                     </div>
                                                     @endforeach
                                                    

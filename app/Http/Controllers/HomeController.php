@@ -22,7 +22,7 @@ class HomeController extends Controller
 
 
        
-        return view('index',['category' => $trucksCategoty,'trucklist' => $trucksList ]);
+        return view('Index',['category' => $trucksCategoty,'trucklist' => $trucksList ]);
     }
     function sellMyCar(){
         $url=env('BASEURL').'dealer/trucks';
