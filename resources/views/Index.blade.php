@@ -8,7 +8,7 @@
 @section('content')
     
     <!-- Start Banner section -->
-    <div class="banner-section2">
+    <!-- <div class="banner-section2">
         <div class="row">
             <div class="col-lg-8">
                 <div class="banner-content">
@@ -48,8 +48,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="text-slider2">
+    </div> -->
+    <!-- <div class="text-slider2">
         <div class="marquee_text">
             <img src="assets/img/home2/icon/text-slider-vec.svg" alt="">
             TO GET YOUR DREAM CAR
@@ -64,7 +64,7 @@
             <img src="assets/img/home2/icon/text-slider-vec.svg" alt="">
             234500 USED CARS AVAILABLE
         </div>
-    </div>
+    </div> -->
     <!-- End Banner section -->
     <!-- Start Dream Car section -->
     <div class="dream-car-area pt-100 pb-100">
@@ -83,11 +83,11 @@
                         <ul class="nav nav-pills" id="pills-tab" role="tablist">
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link active" id="pills-make-tab" data-bs-toggle="pill" data-bs-target="#pills-make"
-                                    type="button" role="tab" aria-controls="pills-make" aria-selected="true">Make</button>
+                                    type="button" role="tab" aria-controls="pills-make" aria-selected="true">Body Type</button>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="pills-body-tab" data-bs-toggle="pill" data-bs-target="#pills-body" type="button"
-                                    role="tab" aria-controls="pills-body" aria-selected="false">Body Type</button>
+                                    role="tab" aria-controls="pills-body" aria-selected="false">Make</button>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="pills-location-tab" data-bs-toggle="pill" data-bs-target="#pills-location"
@@ -95,7 +95,7 @@
                             </li>
                         </ul>
                         <div class="explore-btn d-lg-flex d-none">
-                            <a class="explore-btn2" href="brand-category.html">Explore More <i class="bi bi-arrow-right-short"></i></a>
+                            <a class="explore-btn2" href="{{url('/sell-my-car')}}">Explore More <i class="bi bi-arrow-right-short"></i></a>
                         </div>
                     </div>
                 </div>
@@ -107,7 +107,7 @@
                     @foreach($category as $row)
                   
                         <div class="col-xl-2 col-md-3 col-sm-4 col-6 wow fadeInUp" data-wow-delay="200ms">
-                            <a href="{{url('category-wise-list/')}}/{{$row['_id']}}" class="car-category text-center">
+                            <a href="{{url('sell-my-car?category='.$row['_id'])}}" class="car-category text-center">
                                 <div class="icon">
                                     <img src="{{$row['image']}}" style="height:45px" alt="">
                                 </div>
@@ -343,9 +343,9 @@
                                 </div>
                                 <div class="product-content">
                                     <div class="price">
-                                        <strong>{{$row['price']}}</strong>
+                                        <strong>${{$row['price']}}</strong>
                                     </div>
-                                    <h5><a href="{{url('truck-details')}}/{{$row['_id']}}">{{ucwords($row['name'])}}-{{$row['year']}}</a></h5>
+                                    <h5><a href="{{url('truck-details')}}/{{$row['_id']}}">{{ucwords($row['name'])}}-{{$row['modelYear']}}</a></h5>
                                     <ul class="features">
                                         <li>
                                             <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
@@ -357,7 +357,7 @@
                                                     <path d="M7.96853 3.64648C7.92956 3.63086 7.8879 3.62307 7.84592 3.62356C7.80394 3.62404 7.76247 3.63279 7.72387 3.64931C7.68528 3.66583 7.65031 3.68979 7.62098 3.71982C7.59165 3.74986 7.56852 3.78537 7.55292 3.82435L6.62915 6.13025C6.58625 6.12537 6.54313 6.12278 6.49996 6.12249C6.05003 6.12249 5.64362 6.37171 5.43924 6.77288C5.22562 7.19225 5.28035 7.69332 5.58553 8.11316C5.61729 8.15668 5.65563 8.19499 5.69916 8.22675C5.9471 8.407 6.22402 8.50226 6.49996 8.50226C6.94989 8.50226 7.35634 8.25305 7.56067 7.85188C7.7743 7.43251 7.71957 6.93148 7.4146 6.51194C7.3828 6.46827 7.34439 6.42982 7.30076 6.39797C7.27754 6.38137 7.25388 6.36541 7.22979 6.3501L8.1464 4.06206C8.17791 3.98336 8.17688 3.89537 8.14352 3.81744C8.11016 3.73951 8.04722 3.67801 7.96853 3.64648ZM6.99093 7.56166C6.94504 7.65244 6.87483 7.72868 6.78812 7.78187C6.70142 7.83506 6.60163 7.8631 6.49992 7.86287C6.36335 7.86287 6.22589 7.81518 6.0912 7.72107C5.93776 7.50075 5.90763 7.26189 6.00894 7.06306C6.05482 6.97227 6.12504 6.89602 6.21175 6.84283C6.29845 6.78964 6.39824 6.7616 6.49996 6.76184C6.56637 6.76184 6.63294 6.77335 6.69935 6.79572C6.70152 6.79662 6.70353 6.79777 6.70574 6.79867C6.71273 6.80144 6.71976 6.80369 6.7268 6.80595C6.79115 6.83099 6.85221 6.86378 6.90863 6.9036C7.06203 7.12392 7.0922 7.36282 6.99093 7.56166Z"></path>
                                                 </g>
                                             </svg>
-                                            {{$row['mileage']}} miles
+                                            N/A miles
                                         </li>
                                         <li>
                                             <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
@@ -372,7 +372,8 @@
                                                     <path d="M11.1187 9.54713C11.2462 9.54713 11.3495 9.45618 11.3495 9.344C11.3495 9.23181 11.2462 9.14087 11.1187 9.14087C10.9913 9.14087 10.8879 9.23181 10.8879 9.344C10.8879 9.45618 10.9913 9.54713 11.1187 9.54713Z"></path>
                                                 </g>
                                             </svg>
-                                            {{$row['fuelType']}}
+                                            N/A
+                                           
                                         </li>
                                         <li>
                                             <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
@@ -384,7 +385,8 @@
                                                     <path d="M12.35 4.89575H11.9167C11.5583 4.89575 11.2667 5.2042 11.2667 5.58324V6.27072H10.8333V4.20827C10.8333 3.70274 10.4446 3.29162 9.96667 3.29162H8.88333V2.83329H10.1833C10.5417 2.83329 10.8333 2.52484 10.8333 2.14581V1.68749C10.8333 1.30845 10.5417 1 10.1833 1H5.85C5.49163 1 5.2 1.30845 5.2 1.68749V2.14581C5.2 2.52484 5.49163 2.83329 5.85 2.83329H7.15V3.29162H5.86863C5.66627 3.29162 5.46932 3.36701 5.31397 3.50405L4.37515 4.3311C4.29737 4.39972 4.19932 4.43735 4.09803 4.43743H3.03333C2.55537 4.43743 2.16667 4.84854 2.16667 5.35408V6.27072H1.73333V4.89575C1.73333 4.51672 1.4417 4.20827 1.08333 4.20827H0.65C0.291633 4.20827 0 4.51672 0 4.89575V9.47899C0 9.85802 0.291633 10.1665 0.65 10.1665H1.08333C1.4417 10.1665 1.73333 9.85802 1.73333 9.47899V8.10402H2.16667V9.47899C2.16667 9.98452 2.55537 10.3956 3.03333 10.3956H3.73945C3.89458 10.3956 4.03888 10.4841 4.11558 10.6266L4.60807 11.5378C4.68391 11.6781 4.79344 11.7947 4.92557 11.8759C5.0577 11.957 5.20775 11.9998 5.36055 12H9.22892C9.35599 12.0002 9.48154 11.9707 9.59662 11.9137C9.7117 11.8567 9.81349 11.7736 9.89473 11.6702L10.6325 10.7339C10.7622 10.569 10.8332 10.3614 10.8333 10.147V8.10425H11.2667V8.79173C11.2667 9.17077 11.5583 9.47922 11.9167 9.47922H12.35C12.7084 9.47922 13 9.17077 13 8.79173V5.58347C13 5.20443 12.7084 4.89575 12.35 4.89575ZM1.3 9.47899C1.3 9.53977 1.27717 9.59805 1.23654 9.64103C1.19591 9.68401 1.1408 9.70815 1.08333 9.70815H0.65C0.592536 9.70815 0.537426 9.68401 0.496794 9.64103C0.456161 9.59805 0.433333 9.53977 0.433333 9.47899V4.89575C0.433333 4.83497 0.456161 4.77669 0.496794 4.73371C0.537426 4.69073 0.592536 4.66659 0.65 4.66659H1.08333C1.1408 4.66659 1.19591 4.69073 1.23654 4.73371C1.27717 4.77669 1.3 4.83497 1.3 4.89575V9.47899ZM1.73333 7.64569V6.72905H2.16667V7.64569H1.73333ZM5.63333 2.14581V1.68749C5.63333 1.62671 5.65616 1.56842 5.69679 1.52544C5.73743 1.48247 5.79254 1.45832 5.85 1.45832H10.1833C10.2408 1.45832 10.2959 1.48247 10.3365 1.52544C10.3772 1.56842 10.4 1.62671 10.4 1.68749V2.14581C10.4 2.20659 10.3772 2.26488 10.3365 2.30785C10.2959 2.35083 10.2408 2.37497 10.1833 2.37497H5.85C5.79254 2.37497 5.73743 2.35083 5.69679 2.30785C5.65616 2.26488 5.63333 2.20659 5.63333 2.14581ZM7.58333 2.83329H8.45V3.29162H7.58333V2.83329ZM10.4 10.1468C10.4 10.2538 10.3643 10.3578 10.2995 10.4401L9.56193 11.3764C9.52126 11.4281 9.47034 11.4697 9.41279 11.4982C9.35524 11.5267 9.29247 11.5415 9.22892 11.5414H5.36055C5.28417 11.5414 5.20916 11.52 5.14311 11.4794C5.07706 11.4389 5.02232 11.3806 4.98442 11.3105L4.49193 10.3993C4.41609 10.259 4.30656 10.1424 4.17443 10.0612C4.0423 9.98006 3.89225 9.93724 3.73945 9.93708H3.03333C2.79435 9.93708 2.6 9.73153 2.6 9.47876V5.35385C2.6 5.10108 2.79435 4.89552 3.03333 4.89552H4.09803C4.3004 4.89552 4.49735 4.82013 4.6527 4.68309L5.59152 3.85604C5.66929 3.78742 5.76735 3.7498 5.86863 3.74971H9.96667C10.2057 3.74971 10.4 3.95527 10.4 4.20804V10.1465V10.1468ZM10.8333 7.64569V6.72905H11.2667V7.64569H10.8333ZM12.5667 8.7915C12.5667 8.85228 12.5438 8.91057 12.5032 8.95355C12.4626 8.99652 12.4075 9.02067 12.35 9.02067H11.9167C11.8592 9.02067 11.8041 8.99652 11.7635 8.95355C11.7228 8.91057 11.7 8.85228 11.7 8.7915V5.58324C11.7 5.52246 11.7228 5.46417 11.7635 5.4212C11.8041 5.37822 11.8592 5.35408 11.9167 5.35408H12.35C12.4075 5.35408 12.4626 5.37822 12.5032 5.4212C12.5438 5.46417 12.5667 5.52246 12.5667 5.58324V8.7915Z"></path>
                                                 </g>
                                             </svg>
-                                            {{$row['type']}}
+                                            N/A
+                                         
                                         </li>
                                     </ul>
                                 </div>
@@ -399,7 +401,7 @@
     </div>
     <!-- End Featured Car section -->
     <!-- Start Home2 Inner Banner section -->
-    <div class="home2-inner-banner mb-100">
+    <!-- <div class="home2-inner-banner mb-100">
         <div class="container">
             <div class="row wow fadeInUp" data-wow-delay="700ms">
                 <div class="col-lg-12">
@@ -418,7 +420,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- End Home2 Inner Banner section -->
     <!-- Start Recent Launched Car section -->
     <div class="recent-launched-car mb-100">
@@ -469,9 +471,9 @@
                                             <a href="{{url('truck-details')}}/{{$row['_id']}}"><i class="bi bi-arrow-right-short"></i></a>
                                         </div>
                                         <div class="price">
-                                            <strong>{{round($row['price'],2)}}</strong>
+                                            <strong>${{round($row['price'],2)}}</strong>
                                         </div>
-                                        <h6><a href="{{url('truck-details')}}/{{$row['_id']}}">{{ucwords($row['name'])}}-{{$row['year']}}</a></h6>
+                                        <h6><a href="{{url('truck-details')}}/{{$row['_id']}}">{{ucwords($row['name'])}}-{{$row['modelYear']}}</a></h6>
                                     </div>
                                 </div>
                             </div>
@@ -507,7 +509,7 @@
                                 <button class="nav-link" id="fuel-type-tab" data-bs-toggle="tab" data-bs-target="#fuel-type" type="button"
                                     role="tab" aria-controls="fuel-type" aria-selected="false">Mercedes</button>
                             </li>
-                            <li class="nav-item" role="presentation">
+                            <!-- <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="transmission-tab" data-bs-toggle="tab" data-bs-target="#transmission" type="button"
                                     role="tab" aria-controls="transmission" aria-selected="false">Toyota</button>
                             </li>
@@ -526,7 +528,7 @@
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="premium-car-tab" data-bs-toggle="tab" data-bs-target="#premium-car" type="button"
                                     role="tab" aria-controls="premium-car" aria-selected="false"><img src="assets/img/home2/icon/premium.svg" alt=""> Premium Car</button>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -540,7 +542,7 @@
                                 <div class="col-xl-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="200ms">
                                     <div class="product-card2 two">
                                         <div class="product-img">
-                                        @php   
+                                           @php   
                                                 $transformation = "c_fill,h_173,w_285"; 
                                                $img = modifyCloudinaryUrl($row['images'][0],$transformation)
                                                 @endphp
@@ -551,9 +553,9 @@
                                                 <a href="{{url('category-wise-list')}}/{{$row['_id']}}"><img src="{{$row['category']['logo']}}" style="width:44px;height:44px" alt=""></a>
                                             </div>
                                             <div class="price">
-                                                <strong>{{$row['price']}}</strong>
+                                                <strong>${{$row['price']}}</strong>
                                             </div>
-                                            <h6><a href="{{url('truck-details')}}/{{$row['_id']}}">{{ucwords($row['name'])}}-{{$row['year']}}</a></h6>
+                                            <h6><a href="{{url('truck-details')}}/{{$row['_id']}}">{{ucwords($row['name'])}}-{{$row['modelYear']}}</a></h6>
                                         </div>
                                     </div>
                                 </div>
@@ -1538,7 +1540,7 @@
     </div>
     <!-- End Trusted Client section -->
     <!-- Start Home2 Compare section -->
-    <div class="home2-compare-area mb-100">
+    <!-- <div class="home2-compare-area mb-100">
         <div class="modal compare-modal fade" id="compareModal01" tabindex="-1" aria-labelledby="compareModal01Label"
             aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -1738,11 +1740,11 @@
             </div>
         </div>
        
-    </div>
+    </div> -->
     <!-- End Home2 Compare section -->
 
     <!-- Start Testimonial section -->
-    <div class="home2-testimonial-section mb-100">
+    <!-- <div class="home2-testimonial-section mb-100">
         <div class="container">
             <div class="row mb-50 wow fadeInUp" data-wow-delay="200ms">
                 <div class="col-lg-12 d-flex align-items-end justify-content-between gap-3 flex-wrap">
@@ -1850,7 +1852,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- End Testimonial section -->
  
 

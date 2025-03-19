@@ -8,7 +8,7 @@
 @section('content')
 
 <div class="inner-page-banner">
-        <div class="banner-wrapper">
+        <!-- <div class="banner-wrapper">
             <div class="container-fluid">
                 <ul class="breadcrumb-list">
                     <li><a href="index.html">Home</a></li>
@@ -76,7 +76,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
     <!-- End header section -->
     <!-- Start Product Page Section -->
@@ -84,40 +84,11 @@
         <div class="container">
             <div class="row g-xl-4 gy-5">
                 <div class="col-xl-4 order-xl-1 order-2">
-                    <div class="filter-area mb-40">
-                        <div class="title-and-close-btn mb-20">
-                            <h6>Search Filters</h6>
-                            <div class="close-btn">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
-                                    <path d="M7 13.125C5.37555 13.125 3.81763 12.4797 2.66897 11.331C1.52031 10.1824 0.875 8.62445 0.875 7C0.875 5.37555 1.52031 3.81763 2.66897 2.66897C3.81763 1.52031 5.37555 0.875 7 0.875C8.62445 0.875 10.1824 1.52031 11.331 2.66897C12.4797 3.81763 13.125 5.37555 13.125 7C13.125 8.62445 12.4797 10.1824 11.331 11.331C10.1824 12.4797 8.62445 13.125 7 13.125ZM7 14C8.85652 14 10.637 13.2625 11.9497 11.9497C13.2625 10.637 14 8.85652 14 7C14 5.14348 13.2625 3.36301 11.9497 2.05025C10.637 0.737498 8.85652 0 7 0C5.14348 0 3.36301 0.737498 2.05025 2.05025C0.737498 3.36301 0 5.14348 0 7C0 8.85652 0.737498 10.637 2.05025 11.9497C3.36301 13.2625 5.14348 14 7 14Z"/>
-                                    <path d="M4.06506 4.06506C4.1057 4.02431 4.15397 3.99199 4.20713 3.96993C4.26028 3.94788 4.31726 3.93652 4.37481 3.93652C4.43235 3.93652 4.48933 3.94788 4.54248 3.96993C4.59564 3.99199 4.64392 4.02431 4.68456 4.06506L6.99981 6.38118L9.31506 4.06506C9.35573 4.02438 9.40402 3.99211 9.45717 3.9701C9.51032 3.94808 9.56728 3.93675 9.62481 3.93675C9.68233 3.93675 9.73929 3.94808 9.79244 3.9701C9.84559 3.99211 9.89388 4.02438 9.93456 4.06506C9.97523 4.10573 10.0075 4.15402 10.0295 4.20717C10.0515 4.26032 10.0629 4.31728 10.0629 4.37481C10.0629 4.43233 10.0515 4.48929 10.0295 4.54244C10.0075 4.59559 9.97523 4.64388 9.93456 4.68456L7.61843 6.99981L9.93456 9.31506C9.97523 9.35573 10.0075 9.40402 10.0295 9.45717C10.0515 9.51032 10.0629 9.56728 10.0629 9.62481C10.0629 9.68233 10.0515 9.73929 10.0295 9.79244C10.0075 9.84559 9.97523 9.89388 9.93456 9.93456C9.89388 9.97523 9.84559 10.0075 9.79244 10.0295C9.73929 10.0515 9.68233 10.0629 9.62481 10.0629C9.56728 10.0629 9.51032 10.0515 9.45717 10.0295C9.40402 10.0075 9.35573 9.97523 9.31506 9.93456L6.99981 7.61843L4.68456 9.93456C4.64388 9.97523 4.59559 10.0075 4.54244 10.0295C4.48929 10.0515 4.43233 10.0629 4.37481 10.0629C4.31728 10.0629 4.26032 10.0515 4.20717 10.0295C4.15402 10.0075 4.10573 9.97523 4.06506 9.93456C4.02438 9.89388 3.99211 9.84559 3.9701 9.79244C3.94808 9.73929 3.93675 9.68233 3.93675 9.62481C3.93675 9.56728 3.94808 9.51032 3.9701 9.45717C3.99211 9.40402 4.02438 9.35573 4.06506 9.31506L6.38118 6.99981L4.06506 4.68456C4.02431 4.64392 3.99199 4.59564 3.96993 4.54248C3.94788 4.48933 3.93652 4.43235 3.93652 4.37481C3.93652 4.31726 3.94788 4.26028 3.96993 4.20713C3.99199 4.15397 4.02431 4.1057 4.06506 4.06506Z"/>
-                                </svg> Clear All
-                            </div>
-                        </div>
-                        <div class="tags">
-                            <ul>
-                                <li class="grid active">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8">
-                                        <path d="M0.167842 0.167842C0.220911 0.114638 0.283955 0.0724268 0.353363 0.0436257C0.422771 0.0148246 0.497179 0 0.572325 0C0.647471 0 0.72188 0.0148246 0.791287 0.0436257C0.860695 0.0724268 0.923739 0.114638 0.976809 0.167842L4.00015 3.19233L7.02349 0.167842C7.07661 0.114724 7.13967 0.072589 7.20907 0.043842C7.27847 0.015095 7.35286 0.000299116 7.42797 0.000299116C7.50309 0.000299116 7.57748 0.015095 7.64688 0.043842C7.71628 0.072589 7.77934 0.114724 7.83246 0.167842C7.88558 0.220959 7.92771 0.284019 7.95646 0.35342C7.98521 0.422821 8 0.497206 8 0.572325C8 0.647445 7.98521 0.721829 7.95646 0.79123C7.92771 0.860632 7.88558 0.923691 7.83246 0.976809L4.80797 4.00015L7.83246 7.02349C7.88558 7.07661 7.92771 7.13967 7.95646 7.20907C7.98521 7.27847 8 7.35286 8 7.42797C8 7.50309 7.98521 7.57748 7.95646 7.64688C7.92771 7.71628 7.88558 7.77934 7.83246 7.83246C7.77934 7.88558 7.71628 7.92771 7.64688 7.95646C7.57748 7.98521 7.50309 8 7.42797 8C7.35286 8 7.27847 7.98521 7.20907 7.95646C7.13967 7.92771 7.07661 7.88558 7.02349 7.83246L4.00015 4.80797L0.976809 7.83246C0.923691 7.88558 0.860632 7.92771 0.79123 7.95646C0.721829 7.98521 0.647445 8 0.572325 8C0.497206 8 0.422821 7.98521 0.35342 7.95646C0.284019 7.92771 0.220959 7.88558 0.167842 7.83246C0.114724 7.77934 0.072589 7.71628 0.043842 7.64688C0.015095 7.57748 0.000299116 7.50309 0.000299116 7.42797C0.000299116 7.35286 0.015095 7.27847 0.043842 7.20907C0.072589 7.13967 0.114724 7.07661 0.167842 7.02349L3.19233 4.00015L0.167842 0.976809C0.114638 0.923739 0.0724268 0.860695 0.0436257 0.791287C0.0148246 0.72188 0 0.647471 0 0.572325C0 0.497179 0.0148246 0.422771 0.0436257 0.353363C0.0724268 0.283955 0.114638 0.220911 0.167842 0.167842Z"/>
-                                    </svg> Wagon
-                                </li>
-                                <li>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8">
-                                        <path d="M0.167842 0.167842C0.220911 0.114638 0.283955 0.0724268 0.353363 0.0436257C0.422771 0.0148246 0.497179 0 0.572325 0C0.647471 0 0.72188 0.0148246 0.791287 0.0436257C0.860695 0.0724268 0.923739 0.114638 0.976809 0.167842L4.00015 3.19233L7.02349 0.167842C7.07661 0.114724 7.13967 0.072589 7.20907 0.043842C7.27847 0.015095 7.35286 0.000299116 7.42797 0.000299116C7.50309 0.000299116 7.57748 0.015095 7.64688 0.043842C7.71628 0.072589 7.77934 0.114724 7.83246 0.167842C7.88558 0.220959 7.92771 0.284019 7.95646 0.35342C7.98521 0.422821 8 0.497206 8 0.572325C8 0.647445 7.98521 0.721829 7.95646 0.79123C7.92771 0.860632 7.88558 0.923691 7.83246 0.976809L4.80797 4.00015L7.83246 7.02349C7.88558 7.07661 7.92771 7.13967 7.95646 7.20907C7.98521 7.27847 8 7.35286 8 7.42797C8 7.50309 7.98521 7.57748 7.95646 7.64688C7.92771 7.71628 7.88558 7.77934 7.83246 7.83246C7.77934 7.88558 7.71628 7.92771 7.64688 7.95646C7.57748 7.98521 7.50309 8 7.42797 8C7.35286 8 7.27847 7.98521 7.20907 7.95646C7.13967 7.92771 7.07661 7.88558 7.02349 7.83246L4.00015 4.80797L0.976809 7.83246C0.923691 7.88558 0.860632 7.92771 0.79123 7.95646C0.721829 7.98521 0.647445 8 0.572325 8C0.497206 8 0.422821 7.98521 0.35342 7.95646C0.284019 7.92771 0.220959 7.88558 0.167842 7.83246C0.114724 7.77934 0.072589 7.71628 0.043842 7.64688C0.015095 7.57748 0.000299116 7.50309 0.000299116 7.42797C0.000299116 7.35286 0.015095 7.27847 0.043842 7.20907C0.072589 7.13967 0.114724 7.07661 0.167842 7.02349L3.19233 4.00015L0.167842 0.976809C0.114638 0.923739 0.0724268 0.860695 0.0436257 0.791287C0.0148246 0.72188 0 0.647471 0 0.572325C0 0.497179 0.0148246 0.422771 0.0436257 0.353363C0.0724268 0.283955 0.114638 0.220911 0.167842 0.167842Z"/>
-                                    </svg> Panama City
-                                </li>
-                                <li>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8">
-                                        <path d="M0.167842 0.167842C0.220911 0.114638 0.283955 0.0724268 0.353363 0.0436257C0.422771 0.0148246 0.497179 0 0.572325 0C0.647471 0 0.72188 0.0148246 0.791287 0.0436257C0.860695 0.0724268 0.923739 0.114638 0.976809 0.167842L4.00015 3.19233L7.02349 0.167842C7.07661 0.114724 7.13967 0.072589 7.20907 0.043842C7.27847 0.015095 7.35286 0.000299116 7.42797 0.000299116C7.50309 0.000299116 7.57748 0.015095 7.64688 0.043842C7.71628 0.072589 7.77934 0.114724 7.83246 0.167842C7.88558 0.220959 7.92771 0.284019 7.95646 0.35342C7.98521 0.422821 8 0.497206 8 0.572325C8 0.647445 7.98521 0.721829 7.95646 0.79123C7.92771 0.860632 7.88558 0.923691 7.83246 0.976809L4.80797 4.00015L7.83246 7.02349C7.88558 7.07661 7.92771 7.13967 7.95646 7.20907C7.98521 7.27847 8 7.35286 8 7.42797C8 7.50309 7.98521 7.57748 7.95646 7.64688C7.92771 7.71628 7.88558 7.77934 7.83246 7.83246C7.77934 7.88558 7.71628 7.92771 7.64688 7.95646C7.57748 7.98521 7.50309 8 7.42797 8C7.35286 8 7.27847 7.98521 7.20907 7.95646C7.13967 7.92771 7.07661 7.88558 7.02349 7.83246L4.00015 4.80797L0.976809 7.83246C0.923691 7.88558 0.860632 7.92771 0.79123 7.95646C0.721829 7.98521 0.647445 8 0.572325 8C0.497206 8 0.422821 7.98521 0.35342 7.95646C0.284019 7.92771 0.220959 7.88558 0.167842 7.83246C0.114724 7.77934 0.072589 7.71628 0.043842 7.64688C0.015095 7.57748 0.000299116 7.50309 0.000299116 7.42797C0.000299116 7.35286 0.015095 7.27847 0.043842 7.20907C0.072589 7.13967 0.114724 7.07661 0.167842 7.02349L3.19233 4.00015L0.167842 0.976809C0.114638 0.923739 0.0724268 0.860695 0.0436257 0.791287C0.0148246 0.72188 0 0.647471 0 0.572325C0 0.497179 0.0148246 0.422771 0.0436257 0.353363C0.0724268 0.283955 0.114638 0.220911 0.167842 0.167842Z"/>
-                                    </svg> Toyota
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                   
                     <div class="product-sidebar">
-                        <div class="product-widget mb-20">
+                        <!-- <div class="product-widget mb-20">
                             <div class="check-box-item">
-                                <h6 class="product-widget-title mb-20">Make</h6>
+                                <h6 class="product-widget-title mb-20">Search Options</h6>
                                 <div class="checkbox-container">
                                     <div class="form-inner">
                                         <input type="text" placeholder="Search Make">
@@ -182,32 +153,55 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="product-widget mb-20">
                             <div class="check-box-item">
-                                <h6 class="product-widget-title mb-20">Year</h6>
+                                <h6 class="product-widget-title mb-20">Search Options</h6>
                                 <div class="checkbox-container">
                                     <div class="row g-3">
-                                        <div class="col-6">
+                                        <div class="col-12">
                                             <div class="form-inner">
-                                                <select>
-                                                    <option value="1">Min Year</option>
-                                                    <option value="2">2016</option>
-                                                    <option value="3">2017</option>
-                                                    <option value="4">2018</option>
-                                                    <option value="5">2019</option>
+                                             
+                                                <select id="category" name="category" >
+                                                    <option value="">Body</option>
+                                                    @foreach($trucksCategoty as $cat)
+                                                    <option value="{{$cat['_id']}}" @if(Request()->category == $cat['_id']) selected   @endif>{{$cat['name']}}</option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-12">
                                             <div class="form-inner">
-                                                <select>
-                                                    <option value="1">Max Year</option>
-                                                    <option value="2">2019</option>
-                                                    <option value="3">2020</option>
-                                                    <option value="4">2021</option>
-                                                    <option value="5">2022</option>
+                                                <select name="condition" id="condition">
+                                                    <option value="">Condition</option>
+                                                    <option value="used"  @if(Request()->condition == 'used') selected   @endif>Used</option>
+                                                    <option value="new"  @if(Request()->condition == 'new') selected   @endif>New</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="form-inner">
+                                                <select name="make" id="make">
+                                                    <option value="">Make</option>
+                                                    @foreach($trucksfilter['make'] as $row)
+
+                                                    <option value="{{$row}}" @if(Request()->make == $row) selected   @endif>{{$row}}</option>
+                                                    @endforeach
+                                                  
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="form-inner">
+                                                <select name="model" id="model">
+                                                    <option value="">model</option>
+                                                    @foreach($trucksfilter['model'] as $row)
+
+                                                    <option value="{{$row}}" @if(Request()->model == $row) selected   @endif>{{$row}}</option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                         </div>
@@ -216,92 +210,31 @@
                             </div>
                         </div>
 
+                      
                         <div class="product-widget mb-20">
                             <div class="check-box-item">
-                                <h6 class="product-widget-title mb-20">Body Type</h6>
-                                <div class="checkbox-container">
-                                    <ul>
-                                        <li>
-                                            <label class="containerss">
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                                <span class="text">Wagon</span>
-                                                <span class="qty">(1,234)</span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="containerss">
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                                <span class="text">Hatchback</span>
-                                                <span class="qty">(11,353)</span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="containerss">
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                                <span class="text">Sedan</span>
-                                                <span class="qty">(1,234)</span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="containerss">
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                                <span class="text">Cab Chassis</span>
-                                                <span class="qty">(4,345)</span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="containerss">
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                                <span class="text">Utility </span>
-                                                <span class="qty">(23,990)</span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="containerss">
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                                <span class="text">Tata</span>
-                                                <span class="qty">(2,345)</span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="containerss">
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                                <span class="text">Hyundai</span>
-                                                <span class="qty">(5,632)</span>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-widget mb-20">
-                            <div class="check-box-item">
-                                <h6 class="product-widget-title mb-25">Price</h6>
+                                <h6 class="product-widget-title mb-25">Year</h6>
                                 <div class="range-wrapper">
                                     <div class="slider-wrapper">
                                       <div id="eg-range-slider"></div>
                                     </div> 
                                     <div class="valus">
                                         <div class="min-value">
-                                            <span>$</span>
-                                            <input type="text" class="from" value="200"/>
+                                            
+                                            <input type="text" class="from" value="1967"/>
                                         </div>
                                         <div class="min-value">
-                                            <span>$</span>
-                                            <input type="text" class="to" value="2000"/>
+                                            
+                                            <input type="text" class="to" value="2024"/>
                                         </div>
                                     </div>
+
+                                    
                                 </div>
                                 
                             </div>
+
+                            
                         </div>
 
                         <div class="product-widget mb-20">
@@ -336,7 +269,7 @@
                             </div>
                         </div>
 
-                        <div class="product-widget mb-20">
+                        <!-- <div class="product-widget mb-20">
                             <div class="check-box-item">
                                 <h6 class="product-widget-title mb-20">Colors</h6>
                                 <div class="checkbox-container d-flex gap-5">
@@ -434,8 +367,8 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
-                        <div class="product-widget mb-20">
+                        </div> -->
+                        <!-- <div class="product-widget mb-20">
                             <div class="check-box-item">
                                 <h6 class="product-widget-title mb-20">Location</h6>
                                 <div class="checkbox-container">
@@ -486,14 +419,101 @@
                                     </ul>
                                 </div>
                             </div>
+                        </div> -->
+                        <div class="product-widget mb-20">
+                            <div class="check-box-item">
+                                <h6 class="product-widget-title mb-20">More Options</h6>
+                                <div class="checkbox-container">
+                                    <div class="row g-3">
+                                        <div class="col-12">
+                                            <div class="form-inner">
+                                                <select name="transmission" id="transmission">
+                                                    <option value="">Transmission</option>
+                                                    @foreach($trucksfilter['transmission'] as $row)
+
+<option value="{{$row}}" @if(Request()->transmission == $row) selected   @endif>{{$row}}</option>
+@endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-inner">
+                                                <select id="engineManufacturer">
+                                                    <option value="">Engine</option>
+                                                    @foreach($trucksfilter['engineManufacturer'] as $row)
+
+<option value="{{$row}}" @if(Request()->engineManufacturer == $row) selected   @endif>{{$row}}</option>
+@endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="form-inner">
+                                                <select id="fuelTypePrimary">
+                                                    <option value="1">Fuel type</option>
+                                                    @foreach($trucksfilter['fuelTypePrimary'] as $row)
+
+<option value="{{$row}}" @if(Request()->fuelTypePrimary == $row) selected   @endif>{{$row}}</option>
+@endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="form-inner">
+                                                <select>
+                                                    <option value="">Drive</option>
+                                                   
+                                                </select>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-12">
+                                            <div class="form-inner">
+                                                <select>
+                                                    <option value="">Max Body Length</option>
+                                                   
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="form-inner">
+                                                <select>
+                                                    <option value="">Engine Manufacturer</option>
+                                                   
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="form-inner">
+                                                <select>
+                                                    <option value="">Additional features</option>
+                                                   
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <h6 class="product-widget-title mb-20">More Options</h6>
+                                        <div class="col-12">
+                                            <div class="form-inner">
+                                                <input type="text" placeholder="Search...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
                 </div>
                 <div class="col-xl-8 order-xl-2 order-1">
                     <div class="row mb-40">
                         <div class="col-lg-12">
                             <div class="show-item-and-filte">
-                                <p>Showing <strong>2,928</strong> car available in stock</p>
+                                <p>Showing <strong>{{count($list)}}</strong> car available in stock</p>
                                 <div class="filter-view">
                                     <div class="filter-atra">
                                         <h6>Filter By:</h6>
@@ -506,7 +526,7 @@
                                             </div>
                                         </form>
                                     </div>
-                                    <div class="view">
+                                    <!-- <div class="view">
                                         <ul class="btn-group list-grid-btn-group">
                                             <li class="active grid">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
@@ -537,7 +557,7 @@
                                                 </svg>
                                             </li>
                                         </ul>
-                                    </div>
+                                    </div> -->
                                 </div>
 
                             </div>
@@ -546,6 +566,7 @@
                     <div class="list-grid-main">
                         <div class="list-grid-product-wrap grid-group-wrapper">
                             <div class="row g-4 justify-content-center mb-40">
+                             
                                 @foreach($list as $row)
                                 <div class="col-lg-6 col-md-6 col-sm-12 wow fadeInUp item" data-wow-delay="200ms">
                                     <div class="product-card">
@@ -579,8 +600,12 @@
                                             <div class="swiper product-img-slider">
                                                 <div class="swiper-wrapper">
                                                     @foreach($row['images'] as $img)
+                                                    @php   
+                                                $transformation = "c_fill,h_177,w_335"; 
+                                               $img = modifyCloudinaryUrl($img,$transformation)
+                                                @endphp
                                                     <div class="swiper-slide">
-                                                        <img src="{{$img}}" alt="image">
+                                                        <img src="{{$img}}"  style="width:100%;" alt="image">
                                                     </div>
                                                     @endforeach
                                                     <!-- <div class="swiper-slide">
@@ -596,7 +621,7 @@
                                             </div>
                                         </div>
                                         <div class="product-content">
-                                            <h5><a href="{{url('truck-details')}}/{{$row['_id']}}">{{$row['name']}}-{{$row['year']}}</a></h5>
+                                            <h5><a href="{{url('truck-details')}}/{{$row['_id']}}">{{$row['name']}}-{{$row['modelYear']}}</a></h5>
                                             <div class="price-location">
                                                 <div class="price">
                                                     <strong>{{round($row['price'],2)}}</strong>
@@ -620,7 +645,7 @@
                                                 </li>
                                             </ul>
                                             <div class="content-btm">
-                                                <a class="view-btn2" href="car-deatils.html">
+                                                <a class="view-btn2" href="{{url('truck-details')}}/{{$row['_id']}}">
                                                     <svg width="35" height="21" viewBox="0 0 35 21"
                                                         xmlns="http://www.w3.org/2000/svg">
                                                         <path
@@ -637,7 +662,7 @@
                                                 </a>
                                                 <div class="brand">
                                                     <a href="single-brand-category.html">
-                                                        <img src="assets/img/home1/icon/mercedes-01.svg" alt="image">
+                                                        <img src="{{$row['category']['logo']}}" style="width:44px;height:44px" alt="image">
                                                     </a>
                                                 </div>
                                             </div>
@@ -1501,7 +1526,7 @@
                                     </div>
                                 </div> -->
                             </div>
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div class="col-lg-12">
                                     <div class="pagination-and-next-prev">
                                         <div class="pagination">
@@ -1534,7 +1559,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -1543,243 +1568,95 @@
         </div>
     </div>
     <!-- End Product Page Section -->
-    <div class="toprated-used-cars mb-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="title">
-                        <h4>Top Rated Used Cars For Sale</h4>
-                    </div>
-                    <div class="brand-list">
-                        <ul>
-                            <li><a href="single-brand-category.html">Mitsubishi <span>(1,234)</span></a></li>
-                            <li><a href="single-brand-category.html">Mazda <span>(2,365)</span></a></li>
-                            <li><a href="single-brand-category.html">Land Rover <span>(7,562)</span></a></li>
-                            <li><a href="single-brand-category.html">Volkswagen <span>(1,638)</span></a></li>
-                            <li><a href="single-brand-category.html">Mercedes-Benz <span>(8,556)</span></a></li>
-                            <li><a href="single-brand-category.html">Suzuki <span>(4,772)</span></a></li>
-                            <li><a href="single-brand-category.html">Isuzu <span>(9,676)</span></a></li>
-                            <li><a href="single-brand-category.html">Volvo <span>(3,763)</span></a></li>
-                            <li><a href="single-brand-category.html">Honda <span>(2,432)</span></a></li>
-                            <li><a href="single-brand-category.html">Hyundai <span>(22,463)</span></a></li>
-                            <li><a href="single-brand-category.html">Nissan <span>(1,873)</span></a></li>
-                            <li><a href="single-brand-category.html">SsangYong <span>(277 )</span></a></li>
-                            <li><a href="single-brand-category.html">Peugeot <span>(7,382)</span></a></li>
-                            <li><a href="single-brand-category.html">Kia <span>(532)</span></a></li>
-                            <li><a href="single-brand-category.html">Maserati <span>(675)</span></a></li>
-                            <li><a href="single-brand-category.html">Bentley <span>(5,645)</span></a></li>
-                            <li><a href="single-brand-category.html">Holden <span>(11,324)</span></a></li>
-                            <li><a href="single-brand-category.html">Haval <span>(6,676)</span></a></li>
-                            <li><a href="single-brand-category.html">SKODA <span>(4,453)</span></a></li>
-                            <li><a href="single-brand-category.html">Porsche <span>(3,754)</span></a></li>
-                            <li><a href="single-brand-category.html">Subaru <span>(1,754)</span></a></li>
-                            <li><a href="single-brand-category.html">Tesla <span>(9,442)</span></a></li>
-                            <li><a href="single-brand-category.html">Mahindra <span>(3,766)</span></a></li>
-                            <li><a href="single-brand-category.html">Lamborghini <span>(6,834)</span></a></li>
-                            <li><a href="single-brand-category.html">Mitsubishi <span>(432)</span></a></li>
-                            <li><a href="single-brand-category.html">Mazda <span>(5,334)</span></a></li>
-                            <li><a href="single-brand-category.html">Bentley <span>(5,645)</span></a></li>
-                            <li><a href="single-brand-category.html">Holden <span>(11,324)</span></a></li>
-                            <li><a href="single-brand-category.html">Haval <span>(6,676)</span></a></li>
-                            <li><a href="single-brand-category.html">SKODA <span>(4,453)</span></a></li>
-                            <li><a href="single-brand-category.html">Porsche <span>(3,754)</span></a></li>
-                            <li><a href="single-brand-category.html">Subaru <span>(1,754)</span></a></li>
-                            <li><a href="single-brand-category.html">Tesla <span>(9,442)</span></a></li>
-                            <li><a href="single-brand-category.html">Mahindra <span>(3,766)</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Start Teatimonial Section -->
-    <div class="customar-feedback-area mb-100">
-        <div class="container">
-            <div class="row mb-60 wow fadeInUp" data-wow-delay="200ms">
-                <div class="col-lg-12">
-                    <div class="section-title1">
-                        <span>Customer Feedback</span>
-                        <h2>What Our Customers Are Saying</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row g-4 mb-100">
-                <div class="col-lg-3 wow fadeInUp" data-wow-delay="200ms">
-                    <div class="customer-feedback-left">
-                        <a href="#" class="trustpilot">
-                            <h5>Excellent!</h5>
-                            <img class="star" src="assets/img/home1/icon/trustpilot-star3.svg" alt="">
-                            <span>Based On <strong>2348</strong> Reviews</span>
-                            <img class="logo" src="assets/img/home1/icon/trustpilot-log3.svg" alt="">
-                        </a>
-                        <a href="#" class="google">
-                            <img class="logo" src="assets/img/home1/icon/google3.svg" alt="">
-                            <div class="star">
-                                <ul>
-                                    <li class="active"><i class="bi bi-star-fill"></i></li>
-                                    <li><i class="bi bi-star-fill"></i></li>
-                                    <li><i class="bi bi-star-fill"></i></li>
-                                    <li><i class="bi bi-star-fill"></i></li>
-                                    <li class=""><i class="bi bi-star-half"></i></li>
-                                </ul>
-                            </div>
-                            <span>Based On <strong>1448</strong> Reviews</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-9 wow fadeInUp" data-wow-delay="200ms">
-                    <div class="customer-feedback-right">
-                        <div class="swiper customer-feedback-slider mb-40">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="feedback-card">
-                                        <div class="feedback-top">
-                                            <div class="stat-area">
-                                                <div class="star">
-                                                    <ul>
-                                                        <li class="active"><i class="bi bi-star-fill"></i></li>
-                                                        <li><i class="bi bi-star-fill"></i></li>
-                                                        <li><i class="bi bi-star-fill"></i></li>
-                                                        <li><i class="bi bi-star-fill"></i></li>
-                                                        <li class=""><i class="bi bi-star-half"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <span>Great Services!</span>
-                                            </div>
-                                            <div class="logo">
-                                                <img src="assets/img/home1/icon/google3.svg" alt="">
-                                            </div>
-                                        </div>
-                                        <p>Drivco-Agency to the actively encourage customers to leave
-                                            reviews to the help promote their products and services.”</p>
-                                        <div class="author-name">
-                                            <h6>Nowry Jahan</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="feedback-card">
-                                        <div class="feedback-top">
-                                            <div class="stat-area">
-                                                <img src="assets/img/home1/icon/trustpilot-star.svg" alt="">
-                                                <span>Trusted Company</span>
-                                            </div>
-                                            <div class="logo">
-                                                <img src="assets/img/home1/icon/trustpilot-log3.svg" alt="">
-                                            </div>
-                                        </div>
-                                        <p>Drivco-Agency customer feedback is an invaluable source of
-                                            information that can help businesses improve their offerings and provide
-                                            better experiences.</p>
-                                        <div class="author-name">
-                                            <h6>Jhon Abraham</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="feedback-card">
-                                        <div class="feedback-top">
-                                            <div class="stat-area">
-                                                <div class="star">
-                                                    <ul>
-                                                        <li class="active"><i class="bi bi-star-fill"></i></li>
-                                                        <li><i class="bi bi-star-fill"></i></li>
-                                                        <li><i class="bi bi-star-fill"></i></li>
-                                                        <li><i class="bi bi-star-fill"></i></li>
-                                                        <li class=""><i class="bi bi-star-half"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <span>Great Services!</span>
-                                            </div>
-                                            <div class="logo">
-                                                <img src="assets/img/home1/icon/google3.svg" alt="">
-                                            </div>
-                                        </div>
-                                        <p>Drivco-Agency to the actively encourage customers to leave
-                                            reviews to the help promote their products and services.”</p>
-                                        <div class="author-name">
-                                            <h6>Nowry Jahan</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="feedback-card">
-                                        <div class="feedback-top">
-                                            <div class="stat-area">
-                                                <img src="assets/img/home1/icon/trustpilot-star.svg" alt="">
-                                                <span>Trusted Company</span>
-                                            </div>
-                                            <div class="logo">
-                                                <img src="assets/img/home1/icon/trustpilot-log3.svg" alt="">
-                                            </div>
-                                        </div>
-                                        <p>Drivco-Agency customer feedback is an invaluable source of
-                                            information that can help businesses improve their offerings and provide
-                                            better experiences.</p>
-                                        <div class="author-name">
-                                            <h6>Jhon Abraham</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row ">
-                            <div class="col-lg-12 divider">
-                                <div class="slider-btn-group style-2 justify-content-md-between justify-content-center">
-                                    <div class="slider-btn prev-4 d-md-flex d-none">
-                                        <svg width="11" height="19" viewBox="0 0 8 13"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z"></path>
-                                        </svg>
-                                    </div>
-                                    <div class="view-btn-area">
-                                        <p>Thousand of People Reviews to Us</p>
-                                        <a class="view-btn" href="customer-review.html">View All Review</a>
-                                    </div>
-                                    <div class="slider-btn next-4 d-md-flex d-none">
-                                        <svg width="11" height="19" viewBox="0 0 8 13"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row wow fadeInUp" data-wow-delay="400ms">
-                <div class="col-lg-12">
-                    <div class="sub-title">
-                        <h6>Our Trusted Partners</h6>
-                        <div class="dash"></div>
-                    </div>
-                    <div class="partner-slider">
-                        <h2 class="marquee_text2">
-                            <img src="assets/img/home1/company-logo-01.png" alt="">
-                            <img src="assets/img/home1/company-logo-02.png" alt="">
-                            <img src="assets/img/home1/company-logo-03.png" alt="">
-                            <img src="assets/img/home1/company-logo-04.png" alt="">
-                            <img src="assets/img/home1/company-logo-05.png" alt="">
-                            <img src="assets/img/home1/company-logo-06.png" alt="">
-                            <img src="assets/img/home1/company-logo-01.png" alt="">
-                            <img src="assets/img/home1/company-logo-02.png" alt="">
-                            <img src="assets/img/home1/company-logo-03.png" alt="">
-                            <img src="assets/img/home1/company-logo-04.png" alt="">
-                            <img src="assets/img/home1/company-logo-05.png" alt="">
-                            <img src="assets/img/home1/company-logo-06.png" alt="">
-                        </h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Teatimonial Section -->
-
+   
+   
     @endsection
 
 @section('script')
+
+<script>
+
+document.getElementById("category").onchange = function() {
+    let key = "category"; // Key you want to add in URL
+    let value = this.value; // Get selected value
+    
+    // Update URL without reloading the page
+    let url = new URL(window.location);
+    url.searchParams.set(key, value);
+    window.history.pushState({}, '', url);
+   location.reload();
+};
+
+
+document.getElementById("condition").onchange = function() {
+    let key = "condition"; // Key you want to add in URL
+    let value = this.value; // Get selected value
+    
+    // Update URL without reloading the page
+    let url = new URL(window.location);
+    url.searchParams.set(key, value);
+    window.history.pushState({}, '', url);
+    location.reload();
+};
+
+
+document.getElementById("make").onchange = function() {
+    let key = "make"; // Key you want to add in URL
+    let value = this.value; // Get selected value
+    
+    // Update URL without reloading the page
+    let url = new URL(window.location);
+    url.searchParams.set(key, value);
+    window.history.pushState({}, '', url);
+   location.reload();
+};
+
+document.getElementById("model").onchange = function() {
+    let key = "model"; // Key you want to add in URL
+    let value = this.value; // Get selected value
+    
+    // Update URL without reloading the page
+    let url = new URL(window.location);
+    url.searchParams.set(key, value);
+    window.history.pushState({}, '', url);
+   location.reload();
+};
+
+document.getElementById("transmission").onchange = function() {
+    let key = "transmission"; // Key you want to add in URL
+    let value = this.value; // Get selected value
+    
+    // Update URL without reloading the page
+    let url = new URL(window.location);
+    url.searchParams.set(key, value);
+    window.history.pushState({}, '', url);
+   location.reload();
+};
+
+document.getElementById("engineManufacturer").onchange = function() {
+    let key = "engineManufacturer"; // Key you want to add in URL
+    let value = this.value; // Get selected value
+    
+    // Update URL without reloading the page
+    let url = new URL(window.location);
+    url.searchParams.set(key, value);
+    window.history.pushState({}, '', url);
+   location.reload();
+};
+
+document.getElementById("fuelTypePrimary").onchange = function() {
+    let key = "fuelTypePrimary"; // Key you want to add in URL
+    let value = this.value; // Get selected value
+    
+    // Update URL without reloading the page
+    let url = new URL(window.location);
+    url.searchParams.set(key, value);
+    window.history.pushState({}, '', url);
+   location.reload();
+};
+
+
+    </script>
 
 @endsection
   

@@ -47,7 +47,7 @@
 					<div id="kt_app_sidebar" class="app-sidebar flex-column" data-kt-drawer="true" data-kt-drawer-name="app-sidebar" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="225px" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle">
 						@include('admin.comman.sidebar')
 						<!--begin::Footer-->
-						<div class="app-sidebar-footer flex-column-auto pt-2 pb-6 px-6" id="kt_app_sidebar_footer">
+						<!-- <div class="app-sidebar-footer flex-column-auto pt-2 pb-6 px-6" id="kt_app_sidebar_footer">
 							<a href="https://preview.keenthemes.com/html/metronic/docs" class="btn btn-flex flex-center btn-custom btn-primary overflow-hidden text-nowrap px-0 h-40px w-100" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss-="click" title="200+ in-house components and 3rd-party plugins">
 								<span class="btn-label">Docs & Components</span>
 								<i class="ki-duotone ki-document btn-icon fs-2 m-0">
@@ -55,7 +55,7 @@
 									<span class="path2"></span>
 								</i>
 							</a>
-						</div>
+						</div> -->
 						<!--end::Footer-->
 					</div>
 					<!--end::Sidebar-->
@@ -5513,13 +5513,17 @@
 		<!--end::Javascript-->
 		<script>
 
+			function closeModal(id){
+				$(`#${id}`).modal('hide');
+			}
+
 function successAlert(msg){
         Swal.fire({
         position: "top-end",
         icon: "success",
         title: msg,
         showConfirmButton: false,
-        timer: 1500,
+        timer: 3000,
         width: "300px", // Decrease popup width
   customClass: {
     popup: "small-popup",
@@ -5527,13 +5531,13 @@ function successAlert(msg){
      });
 
      }
-     function errorAlert(msg){
+     function errorAlert(msg,time=3000){
         Swal.fire({
         position: "top-end",
         icon: "warning",
         title: msg,
         showConfirmButton: false,
-        timer: 1500,
+        timer: time,
         width: "300px", // Decrease popup width
   customClass: {
     popup: "small-popup",

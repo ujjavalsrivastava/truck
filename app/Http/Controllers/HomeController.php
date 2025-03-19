@@ -10,7 +10,7 @@ class HomeController extends Controller
     //
     function index(){
 
-        
+        try{
         $url=env('BASEURL').'truck/type';
         $trucksCategoty = Http::get($url);
         $trucksCategoty = $trucksCategoty->json();
@@ -23,21 +23,86 @@ class HomeController extends Controller
 
        
         return view('Index',['category' => $trucksCategoty,'trucklist' => $trucksList ]);
+        }catch(\Exception $e){
+            return back();
+        }
     }
-    function sellMyCar(){
-        $url=env('BASEURL').'dealer/trucks';
-        $trucks = Http::withToken(session()->get('token'))->get($url);
-        $truckList = $trucks->json();
+    function sellMyCar(Request $request){
+
+       
+   
+   
+        // $string ='';
+        // if(isset($request->cat_id)){
+        // $string .= '&category='.$request->cat_id;
+        // }
+        // if(isset($request->condition)){
+        //     $string .= '&condition='.$request->condition;
+        // }
+        // if(isset($request->make)){
+        //     $string .= '&make='.$request->make;
+        // }
+
+        // if(isset($request->model)){
+        //     $string .= '&model='.$request->model;
+        // }
+
+        // if(isset($request->transmission)){
+        //     $string .= '&transmission='.$request->transmission;
+        // }
+        // if(isset($request->fuelTypePrimary)){
+        //     $string .= '&fuelTypePrimary='.$request->fuelTypePrimary;
+        // }
         
-        return view('sellMyCar',['list' => $truckList]);
+
+        // if(isset($request->engineManufacturer)){
+        //     $string .= '&engineManufacturer='.$request->engineManufacturer;
+        // }
+        
+        
+
+        
+
+        $caturl=env('BASEURL').'truck/type';
+        $trucksCategoty = Http::get($caturl);
+        $trucksCategoty = $trucksCategoty->json();
+
+        $filterurl=env('BASEURL').'filter';
+        $trucksfilter = Http::get($filterurl);
+        $trucksfilter = $trucksfilter->json();
+
+      
+        // $trucks = Http::withToken(session()->get('token'))->get($url);
+        // $truckList = $trucks->json();
+
+        $queryParams = request()->query();
+        $url=env('BASEURL').'dealer/trucks';
+        $trucks = Http::withToken(session()->get('token'))->withQueryParameters($queryParams)->get( $url);
+        
+        $truckList = $trucks->json();
+      
+        
+        return view('sellMyCar',['list' => $truckList,'trucksCategoty' => $trucksCategoty,'trucksfilter' => $trucksfilter]);
     }
 
     function truckDetatils($id){
         $url=env('BASEURL').'dealer/trucks/'.$id;
         $trucks = Http::get($url);
         $truckDetails = $trucks->json();
+        $custom = $truckDetails;
+        unset($custom['images']);
+        unset($custom['category']);
+        unset($custom['dealer']);
+        unset($custom['_id']);
+        unset($custom['createdAt']);
+        unset($custom['__v']);
+        $getKey = array_keys($custom);
+       
+        $url=env('BASEURL').'dealer/trucks';
+        $truck = Http::get($url);
+        $trucksList = $truck->json();
         
-        return view('truckDetails',['detail' => $truckDetails,'_id' => $id]);
+        return view('truckDetails',['custom' => $custom,'key' =>$getKey ,'detail' => $truckDetails,'_id' => $id,'trucksList' => $trucksList]);
 
     }
     function categoryWiseList($id){

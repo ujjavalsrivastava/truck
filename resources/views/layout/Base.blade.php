@@ -58,32 +58,7 @@
 
 <body class="tt-magic-cursor">
     <!-- Preloader Start -->
-    <div class="egns-preloader">
-        <div class="preloader-close-btn">
-            <span><i class="bi bi-x-lg"></i> Close</span>
-        </div>
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="col-6">
-                    <div class="circle-border">
-                        <div class="moving-circle"></div>
-                        <div class="moving-circle"></div>
-                        <div class="moving-circle"></div>
-                        <svg width="180px" height="150px" viewbox="0 0 187.3 93.7" preserveaspectratio="xMidYMid meet"
-                            style="left: 50%; top: 50%; position: absolute; transform: translate(-50%, -50%) matrix(1, 0, 0, 1, 0, 0);">
-                            <path stroke="#D90A2C" id="outline" fill="none" stroke-width="4" stroke-linecap="round"
-                                stroke-linejoin="round" stroke-miterlimit="10"
-                                d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
-                            <path id="outline-bg" opacity="0.05" fill="none" stroke="#959595" stroke-width="4"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
-                                d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+   
 
     <!-- Modals -->
     <div class="modal signUp-modal fade" id="signUpModal01" tabindex="-1" aria-labelledby="signUpModal01Label"
@@ -133,14 +108,7 @@
                             </div>
                             
                         </div>
-                        <div class="terms-conditon">
-                            <p>By sign up,you agree to the <a href="#">‘terms & conditons’</a></p>
-                        </div>
-                        <ul class="social-icon">
-                            <li><a href="#"><img src="{{asset('assets/img/home1/icon/google.svg')}}" alt=""></a></li>
-                            <li><a href="#"><img src="{{asset('assets/img/home1/icon/facebook.svg')}}" alt=""></a></li>
-                            <li><a href="#"><img src="{{asset('assets/img/home1/icon/twiter.svg')}}" alt=""></a></li>
-                        </ul>
+                        
                     </form>
                 </div>
             </div>
@@ -589,173 +557,29 @@
         </div>
         <ul class="menu-list">
             <li class="menu-item-has-children active">
-                <a href="#" class="drop-down">Home</a><i class="bi bi-plus dropdown-icon"></i>
-                <ul class="sub-menu">
+                <a href="{{url('/')}}" class="drop-down">Home</a><i class="bi bi-plus dropdown-icon"></i>
+                <!-- <ul class="sub-menu">
                     <li><a href="index.html">Home 01</a></li>
                     <li><a href="index2.html">Home 02</a></li>
                     <li><a href="index3.html">Home 03</a></li>
                     <li><a href="index4.html">Home 04</a></li>
                     <li><a href="index5.html">Home 05</a></li>
                     <li><a href="index6.html">Home 06</a></li>
-                </ul>
+                </ul> -->
             </li>
             <li class="position-inherit">
-                <a href="#" class="drop-down">NEW CAR</a>
-                <i class="bi bi-plus dropdown-icon"></i>
-                <div class="mega-menu">
-                    <ul class="menu-row">
-                        <li class="menu-single-item">
-                            <h6>Browse by Brand</h6>
-                            <ul>
-                                <li><a href="single-brand-category.html">Merchedes Benz (10) <img src="{{asset('assets/img/menu-icon/merchedes.svg')}}" alt=""></a></li>
-                                <li><a href="single-brand-category.html">Volkswagen (10) <img src="{{asset('assets/img/menu-icon/volkswagen.svg')}}" alt=""></a></li>
-                                <li><a href="single-brand-category.html">Ferrari (10) <img src="{{asset('assets/img/menu-icon/ferrari.svg')}}" alt=""></a></li>
-                                <li><a href="single-brand-category.html">Mazda (10) <img src="{{asset('assets/img/menu-icon/mazda.svg')}}" alt=""></a></li>
-                                <li><a href="single-brand-category.html">Mitsubishi (10) <img src="{{asset('assets/img/menu-icon/mitsubishi.svg')}}" alt=""></a></li>
-                                <li><a href="single-brand-category.html">Lamborghini (10) <img src="{{asset('assets/img/menu-icon/lamborghini.svg')}}" alt=""></a></li>
-                                <li><a href="single-brand-category.html">Tesla (10) <img src="{{asset('assets/img/menu-icon/tesla.svg')}}" alt=""></a></li>
-                                <li><a href="single-brand-category.html">Toyota (10) <img src="{{asset('assets/img/menu-icon/toyota.svg')}}" alt=""></a></li>
-                                <li class="explore-more-btn">
-                                    <a href="brand-category.html">Explore More <i class="bi bi-arrow-right"></i></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu-single-item">
-                            <h6>Popular Models</h6>
-                            <ul>
-                                <li><a href="single-brand-category.html">Toyota Camry</a></li>
-                                <li><a href="single-brand-category.html">Ford Mustang</a></li>
-                                <li><a href="single-brand-category.html">Volkswagen Golf</a></li>
-                                <li><a href="single-brand-category.html">Mercedes C-Class</a></li>
-                                <li><a href="single-brand-category.html">Audi A4</a></li>
-                                <li><a href="single-brand-category.html">Jeep Wrangler</a></li>
-                                <li><a href="single-brand-category.html">Mazda CX-5</a></li>
-                                <li><a href="single-brand-category.html">Chevrolet Corvette</a></li>
-                                <li class="explore-more-btn">
-                                    <a href="brand-category.html">Explore More <i class="bi bi-arrow-right"></i></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu-single-item">
-                            <h6>Popular Cities </h6>
-                            <ul>
-                                <li><a href="single-brand-category.html">Panama City (10)<img src="{{asset('assets/img/menu-icon/panama.svg')}}" alt=""></a></li>
-                                <li><a href="single-brand-category.html">Sydne City (10)<img src="{{asset('assets/img/menu-icon/sydne.svg')}}" alt=""></a></li>
-                                <li><a href="single-brand-category.html">Melbourne City (10)<img src="{{asset('assets/img/menu-icon/melbourne.svg')}}" alt=""></a></li>
-                                <li><a href="single-brand-category.html">New Delhi (10)<img src="{{asset('assets/img/menu-icon/delhi.svg')}}" alt=""></a></li>
-                                <li><a href="single-brand-category.html">New York (10)<img src="{{asset('assets/img/menu-icon/newYork.svg')}}" alt=""></a></li>
-                                <li><a href="single-brand-category.html">Menchester City (10)<img src="{{asset('assets/img/menu-icon/menchester.svg')}}" alt=""></a></li>
-                                <li><a href="single-brand-category.html">City of Greece (10)<img src="{{asset('assets/img/menu-icon/greece.svg')}}" alt=""></a></li>
-                                <li><a href="single-brand-category.html">City of Abu-dabi (10)<img src="{{asset('assets/img/menu-icon/abudabi.svg')}}" alt=""></a></li>
-                                <li class="explore-more-btn">
-                                    <a href="brand-category.html">Explore More <i class="bi bi-arrow-right"></i></a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+                <a href="{{url('/sell-my-car')}}" >Inventory</a>
+                
             </li>
             <li class="position-inherit">
-                <a href="#" class="drop-down">USED CAR</a>
-                <i class="bi bi-plus dropdown-icon"></i>
-                <div class="mega-menu">
-                    <ul class="menu-row">
-                        <li class="menu-single-item">
-                            <h6>Browse by Brand</h6>
-                            <ul>
-                                <li><a href="single-brand-category.html">Merchedes Benz (10) <img src="{{asset('assets/img/menu-icon/merchedes.svg')}}" alt=""></a></li>
-                                <li><a href="single-brand-category.html">Volkswagen (10) <img src="{{asset('assets/img/menu-icon/volkswagen.svg')}}" alt=""></a></li>
-                                <li><a href="single-brand-category.html">Ferrari (10) <img src="{{asset('assets/img/menu-icon/ferrari.svg')}}" alt=""></a></li>
-                                <li><a href="single-brand-category.html">Mazda (10) <img src="{{asset('assets/img/menu-icon/mazda.svg')}}" alt=""></a></li>
-                                <li><a href="single-brand-category.html">Mitsubishi (10) <img src="{{asset('assets/img/menu-icon/mitsubishi.svg')}}" alt=""></a></li>
-                                <li><a href="single-brand-category.html">Lamborghini (10) <img src="{{asset('assets/img/menu-icon/lamborghini.svg')}}" alt=""></a></li>
-                                <li><a href="single-brand-category.html">Tesla (10) <img src="{{asset('assets/img/menu-icon/tesla.svg')}}" alt=""></a></li>
-                                <li><a href="single-brand-category.html">Toyota (10) <img src="{{asset('assets/img/menu-icon/toyota.svg')}}" alt=""></a></li>
-                                <li class="explore-more-btn">
-                                    <a href="brand-category.html">Explore More <i class="bi bi-arrow-right"></i></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu-single-item">
-                            <h6>Popular Models</h6>
-                            <ul>
-                                <li><a href="single-brand-category.html">Toyota Camry</a></li>
-                                <li><a href="single-brand-category.html">Ford Mustang</a></li>
-                                <li><a href="single-brand-category.html">Volkswagen Golf</a></li>
-                                <li><a href="single-brand-category.html">Mercedes C-Class</a></li>
-                                <li><a href="single-brand-category.html">Audi A4</a></li>
-                                <li><a href="single-brand-category.html">Jeep Wrangler</a></li>
-                                <li><a href="single-brand-category.html">Mazda CX-5</a></li>
-                                <li><a href="single-brand-category.html">Chevrolet Corvette</a></li>
-                                <li class="explore-more-btn">
-                                    <a href="brand-category.html">Explore More <i class="bi bi-arrow-right"></i></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu-single-item">
-                            <h6>Popular Cities </h6>
-                            <ul>
-                                <li><a href="single-brand-category.html">Panama City (10)<img src="{{asset('assets/img/menu-icon/panama.svg')}}" alt=""></a></li>
-                                <li><a href="single-brand-category.html">Sydne City (10)<img src="{{asset('assets/img/menu-icon/sydne.svg')}}" alt=""></a></li>
-                                <li><a href="single-brand-category.html">Melbourne City (10)<img src="{{asset('assets/img/menu-icon/melbourne.svg')}}" alt=""></a></li>
-                                <li><a href="single-brand-category.html">New Delhi (10)<img src="{{asset('assets/img/menu-icon/delhi.svg')}}" alt=""></a></li>
-                                <li><a href="single-brand-category.html">New York (10)<img src="{{asset('assets/img/menu-icon/newYork.svg')}}" alt=""></a></li>
-                                <li><a href="single-brand-category.html">Menchester City (10)<img src="{{asset('assets/img/menu-icon/menchester.svg')}}" alt=""></a></li>
-                                <li><a href="single-brand-category.html">City of Greece (10)<img src="{{asset('assets/img/menu-icon/greece.svg')}}" alt=""></a></li>
-                                <li><a href="single-brand-category.html">City of Abu-dabi (10)<img src="{{asset('assets/img/menu-icon/abudabi.svg')}}" alt=""></a></li>
-                                <li class="explore-more-btn">
-                                    <a href="brand-category.html">Explore More <i class="bi bi-arrow-right"></i></a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+                <a href="{{url('/price')}}" class="drop-down">Pricing Plans</a>
+     
             </li>
             <li class="menu-item-has-children">
-                <a href="#" class="drop-down">Pages</a><i class="bi bi-plus dropdown-icon"></i>
-                <ul class="sub-menu">
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="brand-category.html">Brand Category</a></li>
-                    <li><a href="single-brand-category.html">Single Brand Category</a></li>
-                    <li>
-                        <a href="#">Car Listing System</a>
-                        <i class="bi bi-plus dropdown-icon"></i>
-                        <ul class="sub-menu">
-                            <li><a href="car-listing-left-sidebar.html">Car Listing Left Sidebar</a></li>
-                            <li><a href="car-listing-right-sidebar.html">Car Listing Right Sidebar</a></li>
-                            <li><a href="car-listing-no-sidebar.html">Car Listing No Sidebar</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="special-offer.html">Special Offer</a></li>
-                    <li><a href="car-deatils.html">Car Details </a></li>
-                    <li><a href="car-auction-details.html">Car Auction Details</a></li>
-                    <li><a href="compare.html"> Compare Car</a></li>
-                    <li>
-                        <a href="#">Shop</a>
-                        <i class="bi bi-plus dropdown-icon"></i>
-                        <ul class="sub-menu">
-                            <li><a href="shop.html">Shop</a></li>
-                            <li><a href="product-details.html">Product Details</a></li>
-                            <li><a href="checkout.html">Checkout</a></li> 
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Blog</a>
-                        <i class="bi bi-plus dropdown-icon"></i>
-                        <ul class="sub-menu">
-                            <li><a href="blog-standard.html">Blog Standard</a></li>
-                            <li><a href="blog-details.html">Blog  Details</a></li> 
-                        </ul>
-                    </li>
-                    <li><a href="faq.html">FAQ's</a></li>
-                    <li><a href="error.html">Error</a></li>
-                    <li><a href="customer-review.html">Customer Review </a></li>
-                    <li><a href="return-enchange.html">Return & Exchange</a></li>
-                </ul>
+                <a href="#" class="drop-down">Dealers List</a><i class="bi bi-plus dropdown-icon"></i>
+          
             </li>
-            <li>
-                <a href="contact.html" class="drop-down">CONTACT US</a>
-            </li>
+           
         </ul>
         <div class="topbar-right">
             <button class="sell-btn" type="button" data-bs-toggle="modal" data-bs-target="#sellUsModal01">
@@ -803,7 +627,7 @@
     </div>
 
     <!-- Preloader End -->
-    <div class="topbar-header">
+    <!-- <div class="topbar-header">
         <div class="top-bar style-2">
             <div class="company-logo">
                 <a href="{{url('/')}}"><img src="{{asset('assets/img/home2/icon/home2-logo.svg')}}" alt=""></a>
@@ -946,7 +770,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
       
       @include('comman.header')
     
@@ -1106,7 +930,8 @@
 
 
 
-updateUserName();
+
+
 function updateUserName() {
     const userName = localStorage.getItem("user");
     var userdetails = JSON.parse(userName);
@@ -1244,7 +1069,14 @@ document.getElementById("resetPasswordFrom").addEventListener("submit", async fu
 });
 
 
-        
+function LogOut(){
+
+
+
+localStorage.clear();
+
+window.location.replace("{{url('log-out')}}");
+}     
     </script>
 
        @yield('script')

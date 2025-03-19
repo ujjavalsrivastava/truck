@@ -8,7 +8,7 @@
 @section('content')
 <!-- Start Banner section -->
 <div class="inner-page-banner">
-        <div class="banner-wrapper">
+        <!-- <div class="banner-wrapper">
             <div class="container-fluid">
                 <ul class="breadcrumb-list">
                     <li><a href="index.html">Home</a></li>
@@ -109,7 +109,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
     <!-- End Banner section -->
     <!-- Start Car-Details section -->
@@ -460,7 +460,7 @@
                                             <img src="assets/img/inner-page/icon/mileage.svg" alt="">
                                         </div>
                                         <div class="content">
-                                            <h6>25,100 miles</h6>
+                                            <h6>{{@$detail['mileage']}} miles</h6>
                                             <span>Mileage</span>
                                         </div>
                                     </li>
@@ -478,7 +478,7 @@
                                             <img src="assets/img/inner-page/icon/fuel.svg" alt="">
                                         </div>
                                         <div class="content">
-                                            <h6>Petrol + Gas</h6>
+                                            <h6>{{@$detail['fuelType']}}</h6>
                                             <span>Fuel Type</span>
                                         </div>
                                     </li>
@@ -487,7 +487,7 @@
                                             <img src="assets/img/inner-page/icon/condition.svg" alt="">
                                         </div>
                                         <div class="content">
-                                            <h6>Used Car</h6>
+                                            <h6>{{@$detail['condition']}} Car</h6>
                                             <span>Condition</span>
                                         </div>
                                     </li>
@@ -618,23 +618,18 @@
                                 </div>
                                 <div class="overview-content">
                                     <ul>
-                                        <li><span>Make</span> lamborghini</li>
-                                        <li><span>Model</span> lamborghini ave11</li>
-                                        <li><span>Year/Month</span> 2023</li>
-                                        <li><span>Mileage</span> 25,100 miles</li>
-                                        <li><span>Door’s</span> 4 doors</li>
+                                    @foreach($key as $k)
+                                        <li><span>{{$k}}</span> <span>{{@$custom[$k]}}</span></li>
+                                        @endforeach
+                                       
+                                        <li><span>Model</span>  ave11</li>
+                                        <li><span>Year/Month</span> {{@$detail['year']}}</li>
+                                        <li><span>Mileage</span> {{@$detail['mileage']}} miles</li>
+                                        <li><span>Door’s</span> {{@$detail['doors']}} </li>
                                         <li><span>Engine</span> 22,231 cc</li>
-                                        <li><span>Color’s</span> sky blue</li>
+                                        <li><span>Color’s</span> {{@$detail['color']}}</li>
                                     </ul>
-                                    <ul>
-                                        <li><span>Repaire</span> no</li>
-                                        <li><span>Steering</span> right</li>
-                                        <li><span>Steating Catacity</span> 08</li>
-                                        <li><span>Fuel Type</span> petrol+gas</li>
-                                        <li><span>No. of Cylinder</span> 03</li>
-                                        <li><span>Transmission</span> Manual</li>
-                                        <li><span>Wheel’s</span> 04</li>
-                                    </ul>
+                                  
                                 </div>
                             </div>
                         </div>
@@ -647,19 +642,19 @@
                                     <ul>
                                         <li><span>Engine Size</span> 3.5 L</li>
                                         <li><span>Induction</span> Aspirated</li>
-                                        <li><span>Cylinders</span> 6 cyl</li>
+                                        <li><span>Cylinders</span> {{@$detail['engin']['cylinders']}}  cyl</li>
                                         <li><span>Engine Config</span> In-line</li>
                                     </ul>
                                     <ul>
                                         <li><span>Valve Gear</span> DOHC with VVT</li>
                                         <li><span>Fuel Injection</span> Direct Injection</li>
-                                        <li><span>Power</span> 140 kw 7000 rpm</li>
-                                        <li><span>Engine Location</span> front</li>
+                                        <li><span>Power</span>{{@$detail['auxiliaryPowerUnit']}}</li>
+                                        <li><span>Engine Location</span> {{@$detail['location']['country']}} {{@$detail['location']['state']}}</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="single-item mb-50" id="car-color">
+                        <!-- <div class="single-item mb-50" id="car-color">
                             <div class="car-colors">
                                 <div class="title-and-slider-btn mb-25">
                                     <div class="title">
@@ -725,8 +720,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="single-item mb-50" id="car-milage">
+                        </div> -->
+                        <!-- <div class="single-item mb-50" id="car-milage">
                             <div class="car-milage">
                                 <div class="title mb-25">
                                     <h5>Lamborghini Mileage</h5>
@@ -742,8 +737,8 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
-                        <div class="single-item mb-50" id="faqs">
+                        </div> -->
+                        <!-- <div class="single-item mb-50" id="faqs">
                             <div class="faq-area">
                                 <div class="title mb-25">
                                     <h5>FAQ’s & Latest Answer</h5>
@@ -817,8 +812,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="single-item mb-50" id="qus-ans">
+                        </div> -->
+                        <!-- <div class="single-item mb-50" id="qus-ans">
                             <div class="user-qustion-area">
                                 <div class="section-title-and-filter mb-30">
                                     <div class="title">
@@ -957,13 +952,13 @@
                                     <a class="primary-btn3" href="#">Load More Question</a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="car-details-sidebar">
                         <div class="contact-info mb-50">
-                            <div class="single-contact" id="phoneNumber" data-phone="+990737621432">
+                            <div class="single-contact" id="phoneNumber" data-phone="+{{@$detail['dealer']['mobile']}}">
                                 <a><i class='bx bx-phone-call'></i>Show Number</a>
                             </div>
                             <div class="single-contact" id="emailAdress" data-email="info@gmail.com">
@@ -1013,9 +1008,9 @@
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link active" id="new-car-tab" data-bs-toggle="tab"
                                         data-bs-target="#new-car" type="button" role="tab" aria-controls="new-car"
-                                        aria-selected="true">New Car</button>
+                                        aria-selected="true">recent truck</button>
                                 </li>
-                                <li class="nav-item" role="presentation">
+                                <!-- <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="used-car-tab" data-bs-toggle="tab"
                                         data-bs-target="#used-car" type="button" role="tab" aria-controls="used-car"
                                         aria-selected="false">Used Car</button>
@@ -1024,15 +1019,16 @@
                                     <button class="nav-link" id="auction-car-tab" data-bs-toggle="tab"
                                         data-bs-target="#auction-car" type="button" role="tab"
                                         aria-controls="auction-car" aria-selected="false">Auction Car</button>
-                                </li>
+                                </li> -->
                             </ul>
                             <div class="tab-content mb-30" id="myTab6Content">
                                 <div class="tab-pane fade show active" id="new-car" role="tabpanel"
                                     aria-labelledby="new-car-tab">
+                                    @foreach($trucksList as $row)
                                     <div class="product-st-card1 two mb-30">
                                         <div class="product-img">
                                             <div class="product-price">
-                                                <span>$7,656.00</span>
+                                                <span>${{$row['price']}}</span>
                                             </div>
                                             <a href="#" class="fav">
                                                 <svg width="14" height="13" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
@@ -1041,28 +1037,33 @@
                                                 </svg>
                                             </a>
                                             <div class="car-img">
-                                                <img class="img-fluid" src="assets/img/inner-page/sb-img-01.png" alt="image">
+                                            @php   
+                                                $transformation = "c_fill,h_122,w_150"; 
+                                               $img = modifyCloudinaryUrl($row['images'][0],$transformation)
+                                                @endphp
+                                                <img class="img-fluid" src="{{$img}}" style="width:100%" alt="image">
                                             </div> 
                                         </div>
                                         <div class="product-content">
-                                            <h6><a href="car-deatils.html">Mercedes-Benz-2023</a></h6>
+                                            <h6><a href="car-deatils.html">{{@$row['name']}}-{{{@$row['year']}}}</a></h6>
                                             <ul class="features">
                                                 <li>
-                                                    <img src="assets/img/home4/icon/menual.svg" alt="">
+                                                    <img src="{{asset('assets/img/home4/icon/menual.svg')}}" alt="">
                                                     Automatic
                                                 </li>
                                                 <li>
-                                                    <img src="assets/img/home4/icon/fuel.svg" alt="">
+                                                    <img src="{{asset('assets/img/home4/icon/fuel.svg')}}" alt="">
                                                     Petrol
                                                 </li>
                                                 <li>
-                                                    <img src="assets/img/home4/icon/electric.svg" alt="">
+                                                    <img src="{{asset('assets/img/home4/icon/electric.svg')}}" alt="">
                                                     Electric
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="product-st-card1 two mb-30">
+                                    @endforeach
+                                    <!-- <div class="product-st-card1 two mb-30">
                                         <div class="product-img">
                                             <div class="product-price">
                                                 <span>$7,656.00</span>
@@ -1160,9 +1161,9 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div class="view-all-btn">
-                                        <a class="primary-btn3 two" href="car-listing-left-sidebar.html">
+                                        <a class="primary-btn3 two" href="{{url('/sell-my-car')}}">
                                             <svg width="35" height="21" viewBox="0 0 35 21" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M11 20C5.47715 20 1 15.7467 1 10.5C1 5.25329 5.47715 1 11 1" stroke-linecap="round"></path>
                                                 <path d="M14.2597 3C14.1569 3 14.0583 3.04166 13.9856 3.11582C13.9129 3.18997 13.8721 3.29055 13.8721 3.39542C13.8721 3.50029 13.9129 3.60086 13.9856 3.67502C14.0583 3.74917 14.1569 3.79083 14.2597 3.79083H15.8104C15.9132 3.79083 16.0118 3.74917 16.0845 3.67502C16.1572 3.60086 16.198 3.50029 16.198 3.39542C16.198 3.29055 16.1572 3.18997 16.0845 3.11582C16.0118 3.04166 15.9132 3 15.8104 3H14.2597ZM16.7795 3C16.6767 3 16.5781 3.04166 16.5054 3.11582C16.4327 3.18997 16.3919 3.29055 16.3919 3.39542C16.3919 3.50029 16.4327 3.60086 16.5054 3.67502C16.5781 3.74917 16.6767 3.79083 16.7795 3.79083H21.3346C21.4374 3.79083 21.536 3.74917 21.6087 3.67502C21.6814 3.60086 21.7222 3.50029 21.7222 3.39542C21.7222 3.29055 21.6814 3.18997 21.6087 3.11582C21.536 3.04166 21.4374 3 21.3346 3H16.7795Z"></path>
@@ -1474,7 +1475,7 @@
         </div>
     </div>
     <!-- End Car-Details section -->
-    <div class="most-search-area style-2 pt-90 pb-90 mb-100">
+    <!-- <div class="most-search-area style-2 pt-90 pb-90 mb-100">
         <div class="container">
             <div class="row mb-60 wow fadeInUp" data-wow-delay="200ms">
                 <div class="col-lg-12 d-flex align-items-end justify-content-between flex-wrap gap-4">
@@ -2312,7 +2313,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Start Teatimonial Section -->
     <div class="customar-feedback-area mb-100">
@@ -2471,7 +2472,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row wow fadeInUp" data-wow-delay="400ms">
+            <!-- <div class="row wow fadeInUp" data-wow-delay="400ms">
                 <div class="col-lg-12">
                     <div class="sub-title">
                         <h6>Our Trusted Partners</h6>
@@ -2494,12 +2495,12 @@
                         </h2>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <!-- End Teatimonial Section -->
      <!-- Start Blog Section -->
-     <div class="news-section two pt-90 pb-90">
+     <!-- <div class="news-section two pt-90 pb-90">
         <div class="container">
             <div class="row mb-50 wow fadeInUp" data-wow-delay="200ms">
                 <div class="col-lg-12 d-flex align-items-end justify-content-between flex-wrap gap-4">
@@ -2626,13 +2627,22 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- End Blog Section --> 
      
     @endsection
 
 @section('script')
 <script>
+
+    var truck_id = "{{$detail['_id']}}";
+           
+   addView("truck",truck_id);
+   async function addView(key,id) {
+
+    const response = await axios.put("{{ env('BASEURL').'views' }}?key="+key+"&value="+id+"");
+    
+   } 
 
 $(document).ready(function () {
             document.getElementById("quoteForm").addEventListener("submit", async function (e) {

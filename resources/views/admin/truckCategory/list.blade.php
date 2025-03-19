@@ -8,7 +8,7 @@
 	 .dropdown {
             position: relative;
             display: inline-block;
-			z-index: 99999;
+			z-index: 1;
         }
         .dropdown-button {
           
@@ -19,14 +19,16 @@
            
         }
         .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: white;
-			color: black;
-            min-width: 150px;
-           
-            border-radius: 5px;
-            overflow: hidden;
+			display: none;
+    position: absolute;
+    background-color: white;
+    color: black;
+	min-width: 120px;
+    right: -121px;
+    bottom: -30px;
+    border-radius: 5px;
+    overflow: hidden;
+	box-shadow: 0px 10px 30px 0px rgba(82, 63, 105, 0.05);
         }
         .dropdown-content a {
             color: black;
@@ -41,6 +43,15 @@
             display: block;
         }
 
+		.dropdown.btn{
+			background: none !important;
+		}
+
+		.dropdown.btn:hover,
+		.btn.btn-active-light-primary:hover:not(.btn-active){
+			background: none !important;
+		}
+
 	</style>
 
 @endsection
@@ -48,14 +59,12 @@
 
 	<!--begin::Content wrapper-->
     <div class="d-flex flex-column flex-column-fluid">
-							<!--begin::Toolbar-->
-							<div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
-								<!--begin::Toolbar container-->
-								<div id="kt_app_toolbar_container" class="app-container container-xxl d-flex flex-stack">
+
+	<div id="kt_app_toolbar_container" class="app-container container-xxl d-flex flex-stack">
 									<!--begin::Page title-->
 									<div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
 										<!--begin::Title-->
-										<h1 class="page-heading d-flex text-gray-900 fw-bold fs-3 flex-column justify-content-center my-0">Customer List</h1>
+										<h1 class="page-heading d-flex text-gray-900 fw-bold fs-3 flex-column justify-content-center my-0"> Truck Type List</h1>
 										<!--end::Title-->
 										<!--begin::Breadcrumb-->
 										<ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
@@ -64,118 +73,15 @@
 												<a href="index.html" class="text-muted text-hover-primary">Home</a>
 											</li>
 											<!--end::Item-->
+											
 											<!--begin::Item-->
-											<li class="breadcrumb-item">
-												<span class="bullet bg-gray-500 w-5px h-2px"></span>
-											</li>
-											<!--end::Item-->
-											<!--begin::Item-->
-											<li class="breadcrumb-item text-muted">Customers</li>
+											<li class="breadcrumb-item text-muted">Truck Type List</li>
 											<!--end::Item-->
 										</ul>
 										<!--end::Breadcrumb-->
 									</div>
-									<!--end::Page title-->
-									<!--begin::Actions-->
-									<div class="d-flex align-items-center gap-2 gap-lg-3">
-										<!--begin::Filter menu-->
-										<div class="m-0">
-											<!--begin::Menu toggle-->
-											<a href="#" class="btn btn-sm btn-flex btn-secondary fw-bold" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-											<i class="ki-duotone ki-filter fs-6 text-muted me-1">
-												<span class="path1"></span>
-												<span class="path2"></span>
-											</i>Filter</a>
-											<!--end::Menu toggle-->
-											<!--begin::Menu 1-->
-											<div class="menu menu-sub menu-sub-dropdown w-250px w-md-300px" data-kt-menu="true" id="kt_menu_673c0cbd21c2f">
-												<!--begin::Header-->
-												<div class="px-7 py-5">
-													<div class="fs-5 text-gray-900 fw-bold">Filter Options</div>
-												</div>
-												<!--end::Header-->
-												<!--begin::Menu separator-->
-												<div class="separator border-gray-200"></div>
-												<!--end::Menu separator-->
-												<!--begin::Form-->
-												<div class="px-7 py-5">
-													<!--begin::Input group-->
-													<div class="mb-10">
-														<!--begin::Label-->
-														<label class="form-label fw-semibold">Status:</label>
-														<!--end::Label-->
-														<!--begin::Input-->
-														<div>
-															<select class="form-select form-select-solid" multiple="multiple" data-kt-select2="true" data-close-on-select="false" data-placeholder="Select option" data-dropdown-parent="#kt_menu_673c0cbd21c2f" data-allow-clear="true">
-																<option></option>
-																<option value="1">Approved</option>
-																<option value="2">Pending</option>
-																<option value="2">In Process</option>
-																<option value="2">Rejected</option>
-															</select>
-														</div>
-														<!--end::Input-->
-													</div>
-													<!--end::Input group-->
-													<!--begin::Input group-->
-													<div class="mb-10">
-														<!--begin::Label-->
-														<label class="form-label fw-semibold">Member Type:</label>
-														<!--end::Label-->
-														<!--begin::Options-->
-														<div class="d-flex">
-															<!--begin::Options-->
-															<label class="form-check form-check-sm form-check-custom form-check-solid me-5">
-																<input class="form-check-input" type="ustomer Namecheckbox" value="1" />
-																<span class="form-check-label">Author</span>
-															</label>
-															<!--end::Options-->
-															<!--begin::Options-->
-															<label class="form-check form-check-sm form-check-custom form-check-solid">
-																<input class="form-check-input" type="checkbox" value="2" checked="checked" />
-																<span class="form-check-label">Customer</span>
-															</label>
-															<!--end::Options-->
-														</div>
-														<!--end::Options-->
-													</div>
-													<!--end::Input group-->
-													<!--begin::Input group-->
-													<div class="mb-10">
-														<!--begin::Label-->
-														<label class="form-label fw-semibold">Notifications:</label>
-														<!--end::Label-->
-														<!--begin::Switch-->
-														<div class="form-check form-switch form-switch-sm form-check-custom form-check-solid">
-															<input class="form-check-input" type="checkbox" value="" name="notifications" checked="checked" />
-															<label class="form-check-label">Enabled</label>
-														</div>
-														<!--end::Switch-->
-													</div>
-													<!--end::Input group-->
-													<!--begin::Actions-->
-													<div class="d-flex justify-content-end">
-														<button type="reset" class="btn btn-sm btn-light btn-active-light-primary me-2" data-kt-menu-dismiss="true">Reset</button>
-														<button type="submit" class="btn btn-sm btn-primary" data-kt-menu-dismiss="true">Apply</button>
-													</div>
-													<!--end::Actions-->
-												</div>
-												<!--end::Form-->
-											</div>
-											<!--end::Menu 1-->
-										</div>
-										<!--end::Filter menu-->
-										<!--begin::Secondary button-->
-										<!--end::Secondary button-->
-										<!--begin::Primary button-->
-										<a href="#" class="btn btn-sm fw-bold btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app">Create</a>
-										<!--end::Primary button-->
-									</div>
-									<!--end::Actions-->
 								</div>
-								<!--end::Toolbar container-->
-							</div>
-							<!--end::Toolbar-->
+							
 							<!--begin::Content-->
 							<div id="kt_app_content" class="app-content flex-column-fluid">
 								<!--begin::Content container-->
@@ -186,15 +92,7 @@
 										<div class="card-header border-0 pt-6">
 											<!--begin::Card title-->
 											<div class="card-title">
-												<!--begin::Search-->
-												<div class="d-flex align-items-center position-relative my-1">
-													<i class="ki-duotone ki-magnifier fs-3 position-absolute ms-5">
-														<span class="path1"></span>
-														<span class="path2"></span>
-													</i>
-													<input type="text" data-kt-customer-table-filter="search" class="form-control form-control-solid w-250px ps-12" placeholder="Search Customers" />
-												</div>
-												<!--end::Search-->
+												
 											</div>
 											<!--begin::Card title-->
 											<!--begin::Card toolbar-->
@@ -204,7 +102,7 @@
 													
 													
 													<!--begin::Add customer-->
-													<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_add_customer">Add Truck Type</button>
+													<a href="{{url('admin/truck-type-list/create')}}" type="button" class="btn btn-primary">Add Truck Type</a>
 													<!--end::Add customer-->
 												</div>
 												<!--end::Toolbar-->
@@ -229,7 +127,7 @@
 														<th class="min-w-125px"> Name</th>
 														<th class="min-w-125px">Desicretion</th>
 														<th class="min-w-125px">Image</th>
-														<th class="text-end min-w-70px">Actions</th>
+														<th class="min-w-125px">Actions</th>
 													</tr>
 												</thead>
 												<tbody class="fw-semibold text-gray-600 trucklist">
@@ -254,10 +152,10 @@
 													<!--begin::Modal header-->
 													<div class="modal-header" id="kt_modal_add_customer_header">
 														<!--begin::Modal title-->
-														<h2 class="fw-bold">Add Truck Type</h2>
+														<h2 class="fw-bold">Edit Truck Type</h2>
 														<!--end::Modal title-->
 														<!--begin::Close-->
-														<div id="kt_modal_add_customer_close" class="btn btn-icon btn-sm btn-active-icon-primary">
+														<div  onclick="closeModal('kt_modal_add_customer')" id="kt_modal_add_customer_close" class="btn btn-icon btn-sm btn-active-icon-primary">
 															<i class="ki-duotone ki-cross fs-1">
 																<span class="path1"></span>
 																<span class="path2"></span>
@@ -276,7 +174,8 @@
 																<label class="required fs-6 fw-semibold mb-2">Name</label>
 																<!--end::Label-->
 																<!--begin::Input-->
-																<input type="text" class="form-control form-control-solid" placeholder="" name="name" value="Sean Bean" />
+																<input type="text" class="form-control form-control-solid" placeholder="" name="name"  />
+																<input type="hidden" name="edit_id">
 																<!--end::Input-->
 															</div>
 															<!--end::Input group-->
@@ -299,6 +198,7 @@
 																<!--end::Label-->
 																<!--begin::Input-->
 																<input type="file" class="form-control form-control-solid" placeholder="" name="image" />
+																 <img src="" name="image" style="height:50px">
 																<!--end::Input-->
 															</div>
 															<!--end::Input group-->
@@ -455,7 +355,9 @@ document.addEventListener("DOMContentLoaded", function () {
         });
        
           var list = ``;
-          $.each(response.data, function(key,val) {             
+          $.each(response.data, function(key,val) {     
+			
+			var encoded = JSON.stringify(val)
            
          list += `<tr>
 															<td>${val.name} </td>
@@ -463,10 +365,10 @@ document.addEventListener("DOMContentLoaded", function () {
 														<td> <img src="${val.image}" style="height:45px"> </td>
 														<td >
 									
- <div class="dropdown btn btn-sm btn-light btn-flex btn-center btn-active-light-primary">
+ <div class="dropdown btn btn-sm btn-light btn-flex btn-center btn-active-light-primary px-0">
         <button class="dropdown-button">Action</button>
         <div class="dropdown-content">
-            <a href="javascript:void(0)" >Edit </a>
+            <a href="javascript:void(0)" data-truck='${encoded}' onclick="EditTruck('${val._id}',this)">Edit </a>
             <a href="javascript:void(0)" onclick="deleteTruck('${val._id}')">Delete </a>
             
         </div>
@@ -480,6 +382,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
         
     }
+
+	function EditTruck(id,thisval){
+		var data = $(thisval).data('truck');
+		$("input[name=name]").val(data.name);
+		$("input[name=description]").val(data.description);
+		$("input[name=edit_id]").val(data._id);
+		$("img[name=image]").attr('src', data.image);
+		$(`#kt_modal_add_customer`).modal('show');
+		
+	}
 
 	const deleteTruck = async (_id) => {
 
@@ -509,15 +421,33 @@ document.addEventListener("DOMContentLoaded", function () {
 $(document).ready(function () {
             document.getElementById("truck-add-form").addEventListener("submit", async function (e) {
            e.preventDefault(); // Prevent form from reloading the page
-
-    const form = e.target;
-    const formData = new FormData(form);
+ 
+		  
 
 
     try {
-        const response = await axios.post("{{ env('BASEURL').'truck/type' }}", formData, {
+
+
+		var edit_id = $("input[name=edit_id]").val();
+
+		const form = e.target;
+		const formData = new FormData(form);
+
+if(edit_id ==''){
+
+
+    
+        var response = await axios.post("{{ env('BASEURL').'truck/type' }}", formData, {
             headers: { 'Content-Type': 'multipart/form-data',"Authorization": `Bearer ${localStorage.getItem("access_token")}` }
         });
+
+	}else{
+
+		var response = await axios.put("{{ env('BASEURL').'truck/type' }}/"+edit_id, formData, {
+            headers: { 'Content-Type': 'multipart/form-data',"Authorization": `Bearer ${localStorage.getItem("access_token")}` }
+        });
+
+	}
 
         console.log(response);
 

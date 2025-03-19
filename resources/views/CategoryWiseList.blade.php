@@ -251,7 +251,7 @@
                                             </div>
                                         </div>
                                         <div class="product-content">
-                                            <h5><a href="car-deatils.html">{{$row['name']}}-{{$row['year']}}</a></h5>
+                                            <h5><a href="c{{url('truck-details')}}/{{$row['_id']}}">{{$row['name']}}-{{$row['year']}}</a></h5>
                                             <div class="price-location">
                                                 <div class="price">
                                                     <strong>{{round($row['price'],2)}}</strong>

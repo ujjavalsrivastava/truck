@@ -33,10 +33,16 @@ class AuthController extends Controller
         $profile = Http::withToken($token)->get($getProfile);
         
         $user = $profile->json();
-       
+     
         session()->put('token',$token);
         session()->put('user',$user);
-        return redirect('/');
+   
+        if($user['subscription']['type'] == null  && $user['role'] !='admin'){
+            return redirect('/price');
+        }else{
+            return redirect('/admin/dashboard');
+        }
+       
         
        // return $response->json();
     }
